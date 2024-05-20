@@ -75,7 +75,7 @@ Wango is a payment website that allows users to pay for on-street parking. Users
 1. **Install dependencies:**
 
    ```bash
-   cd frontend2
+   cd frontend
    yarn install
    ```
 
