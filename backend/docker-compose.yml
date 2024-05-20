@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: wango
+      POSTGRES_PASSWORD: wango_parking
+      POSTGRES_DB: wango
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    environment:
+      DB_HOST: db
+      DB_NAME: wango
+      DB_USER: wango
+      DB_PASS: wango_parking
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+
+  frontend:
+    build:
+      context: ../frontend
+    ports:
+      - "3001:3000"
+    depends_on:
+      - backend
+
+volumes:
+  db-data:

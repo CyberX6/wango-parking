@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "wango",
+    "password": "wango_parking",
+    "database": "wango",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "wango",
+    "password": "wango_parking",
+    "database": "wango_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "wango",
+    "password": "wango_parking",
+    "database": "wango",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
