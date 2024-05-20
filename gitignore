@@ -5,6 +5,7 @@ node_modules/
 # Yarn
 .yarn/
 yarn-error.log
+.idea
 
 # Logs
 logs/
